@@ -1,7 +1,7 @@
 {
   "name": "s-portfolio",
   "version": "0.1.0",
-  "homepage": "http://NidhiSharma63.github.io/client-portfolio",
+  "homepage": "",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.9.3",
