@@ -1,0 +1,117 @@
+.contact-wrapper{
+  padding: 40px 0px;
+  width: 100%;
+  transition: 1s ease-in-out;
+  background-color: var(--bg-color-light);
+  padding-bottom: 0px;
+  @include flex($direction:column, $justify:space-between, $align:center);
+  gap: 40px;
+
+}
+.contact-wrap{
+  width: 90%;
+  margin: auto;
+  @include flex($direction:column, $justify:space-between, $align:center);
+  gap: 60px;
+
+  .contact-upper-section{
+    @include flex($direction:column, $justify:space-between, $align:center);
+    gap: 20px;
+  }
+}
+
+.contact-middle-section{
+  @include flex($direction:column, $justify:space-between, $align:center);
+  gap: 20px;
+  
+
+  .contact-form-section{
+    @include flex($direction:row, $justify:space-between, $align:center);
+    gap: 30px;
+    width: 731px;
+  
+    .input-container{
+      @include flex($direction:column, $justify:space-between, $align:center);
+      gap: 20px;
+      height: 100%;
+      width: 100%;
+  
+      input{
+        @include input($height:62px);
+      }
+    }
+    .textarea-container{
+      width: 100%;
+  
+      textarea{
+        @include input($height:100%);
+        resize: none;
+      }
+    }
+  }
+}
+
+.contact-link-wrapper{
+  padding: 30px 0px;
+  width: 100%;
+  background-color: var(--bg-color-dark);
+  
+  .contact-link-wrap{
+    @include flex($direction:row, $justify:space-between, $align:center);
+    width: 90%;
+    margin: auto;
+  }
+  .first-section-container{
+    @include flex($direction:row, $justify:space-between, $align:center);
+    gap: 30px;
+    transition: all 1s ease-in-out;
+  }
+
+  .first-section{
+   @include flex($direction:row, $justify:space-between, $align:center);
+   gap: 10px;
+  }
+
+  .contact-icons{
+    @include flex($direction:row, $justify:space-between, $align:center);
+    gap: 10px;
+    transition:all 1s ease-in-out;
+
+  }
+}
+
+
+@media screen and (max-width:800px) {
+  .contact-middle-section{
+    width: 100%;
+
+    .contact-form-section{
+      width: 90%;
+      flex-direction: column;
+    }
+  }
+  .contact-link-wrapper {
+    .contact-link-wrap{
+      width: 100%;
+      flex-direction: column;
+      gap: 22px;
+    }
+  }
+}
+
+@media screen and (max-width:500px){
+  .contact-link-wrapper{
+    .contact-link-wrap{
+      width: 85%;
+      align-items: baseline;
+    }
+    .first-section-container {
+      flex-direction: column;
+      align-items: baseline;
+    }
+    .contact-icons{
+      width: 71%;
+      justify-content: space-between;
+    }
+  }
+}

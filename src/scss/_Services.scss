@@ -1,0 +1,57 @@
+.services-wrappper{
+  padding: 40px 0px;
+  width: 100%;
+  transition: 2s ease-in-out;
+  background-color: var(--bg-color-light);
+  transition: 1s all ease-in-out;
+}
+.services-wrap{
+  width: 90%;
+  margin: auto;
+  @include flex($direction:column, $justify:space-between, $align:unset);
+  gap: 60px;
+}
+
+.service-box-container{
+  @include flex($direction:row, $justify:space-between, $align:center);
+  gap: 20px;
+  transition:1s ease-in-out;
+}
+
+.service-box{
+  @include flex($direction:column, $justify:space-around, $align:center);
+  cursor: pointer;
+   flex-direction: column;
+   align-items: center;
+   background: var(--bg-color-dark);
+   color: white;
+   padding: 35px 0px;
+   border-radius: 15px;
+
+  .service-title{
+    font-size: 23px;
+  }
+ }
+
+@media screen and (max-width: 1044px){
+  .service-box{
+    .service-title{
+      font-size: 18px;
+    }
+  }
+}
+
+@media screen and (max-width: 900px){
+  .services-wrap{
+    .service-box-container{
+      flex-direction: column;
+      .service-box{
+        width: 80%;
+
+        .service-title{
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

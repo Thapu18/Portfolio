@@ -1,0 +1,75 @@
+.skills-wrapper{
+  padding: 40px 0px;
+  width: 100%;
+  transition: 1s ease-in-out;
+  background-color: var(--bg-color-dark);
+}
+
+.skills-wrap{
+  width: 90%;
+  margin: auto;
+  @include flex($direction:row, $justify:space-between, $align:center);
+
+
+  .skills-left{
+    @include flex($direction:column, $justify:space-between, $align:flex-start);
+    gap: 100px;
+    
+    .skills-text{
+      @include flex($direction:column, $justify:space-between, $align:flex-start);
+      gap: 40px;
+    }
+  }
+  
+  .skills-right{
+    @include flex($direction:column, $justify:center, $align:unset);
+    gap: 20px;
+    transition: 1s ease-in-out;
+    width: 40%;
+    .skill-box{
+      background-color:var(--bg-color-light);
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      .skill-info{
+        @include flex($direction:row, $justify:space-between, $align:center);
+      }
+      .progressBar{
+        border-radius: 1rem;
+        height: 10px;
+        background-color: var( --color-white);
+      }
+    }
+  }
+  
+}
+
+@media screen and (max-width: 900px){
+  .skills-wrap{
+    flex-direction: column;
+    gap: 40px;
+
+    .skills-left{
+      .skills-text{
+        gap: 20px;
+      }
+    }
+    .skills-left{
+      gap: 40px;
+    }
+
+    .skills-right{
+      width: 80%;
+    }
+  };
+};
+@media screen and (max-width: 600px){
+  .skills-wrap{
+    .skills-right{
+      width: 100%;
+    }
+  }
+}
+

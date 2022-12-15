@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Bitter:wght@300;400&family=Lobster+Two&family=Merriweather:wght@300;400&family=Roboto+Slab:wght@300;400&family=Work+Sans:wght@300;400&display=swap");
+@import "./utils";
+@import "./Navbar";
+@import "./Herobanner";
+@import "./Services";
+@import "./Skills";
+@import "./project";
+@import "./Blog";
+@import "./Contact";
+
+/*
+  Z-INDEX
+  NAVBAR-- 3
+  side-navbar-wrapper -- 4
+  HERO-BANNER-- 1
+  TOP-LEFT-- -1
+  HERO-IMAGE--- 2
+  PROJECT-IMG-- 2
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color-dark: #252734;
+  --bg-color-light: #2a2c39;
+  --bg-color-extra-light: #40424d;
+
+  --font-family-lobster: "Lobster Two", cursive;
+  --font-family-Bitter: "Bitter", serif;
+  --font-family-Berkshire: "Berkshire Swash", cursive;
+  --font-family-Merriweather: "Merriweather", serif;
+  --font-family-Roboto: "Roboto Slab", serif;
+  --font-family-worksans: "Work Sans", sans-serif;
+
+  --color-white: #ffffff;
+  --light-whiteColor: #d1cccccc;
+
+  --btn-border-color: #afa9a928;
+  --btn-hover-bg-color: #2a2c39;
+
+  --half-circle-border-color: #4e505b;
+
+  --fw-light: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+}
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--bg-color-dark);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  position: relative;
+}
+.main-wrapper {
+  max-width: 1720px;
+  margin: 0 auto;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
